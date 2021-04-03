@@ -15,6 +15,9 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+const PORT = process.env.PORT || 3000;
+
+
 const db = knex({
   client: 'pg',
   connection: {
@@ -34,8 +37,8 @@ app.use(cors())
 
 
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("this app is ${process.env.PORT}");
+app.listen(PORT, () => {
+    console.log(`this app is running ${ PORT }`);
 })
 app.post('/signin', (req,res) => { signin.handlesignin(req, res, db, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister (req, res, db, bcrypt) })
