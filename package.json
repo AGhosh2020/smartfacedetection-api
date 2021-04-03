@@ -2,9 +2,9 @@
   "name": "face-api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "server.js"
   },
   "keywords": [],
   "author": "",
