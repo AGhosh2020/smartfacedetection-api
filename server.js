@@ -34,8 +34,8 @@ app.use(cors())
 
 
 
-app.listen(3000, () => {
-    console.log("this app is working");
+app.listen(process.env.PORT || 3000, () => {
+    console.log("this app is ${process.env.PORT}");
 })
 app.post('/signin', (req,res) => { signin.handlesignin(req, res, db, bcrypt) })
 app.post('/register', (req, res) => { register.handleRegister (req, res, db, bcrypt) })
