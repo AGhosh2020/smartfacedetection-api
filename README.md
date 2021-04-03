@@ -1,2 +1,1 @@
-# smartfacedetection-api
- 
+"# smart-face-api" 
